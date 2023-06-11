@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Input, AddButton, Form, Title } from './ContactForm.styled';
 
 const ContactForm = ({ createContact }) => {
@@ -60,5 +61,8 @@ const ContactForm = ({ createContact }) => {
   );
 };
 
+ContactForm.propTypes = {
+	createContact: PropTypes.func,
+}
 
 export default ContactForm;
