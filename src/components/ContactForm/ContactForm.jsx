@@ -10,11 +10,11 @@ const ContactForm = ({ createContact }) => {
     const { name, value } = target;
     switch (name) {
       case 'name': {
-        setName(value.trim());
+        setName(value);
         break;
       }
       case 'number': {
-        setNumber(value.trim());
+        setNumber(value);
         break;
       }
 

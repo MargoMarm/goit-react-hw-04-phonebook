@@ -11,7 +11,6 @@ export const App = () => {
 	const [contacts, setContacts] = useState(
 		() => (JSON.parse(localStorage.getItem('contacts')) ?? initialContacts)
 	);
-	console.log('contatts first',contacts)
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
@@ -56,7 +55,6 @@ export const App = () => {
   const hadleFilterChange = ({ target }) => {
     setFilter(target.value);
   };
-	console.log(contacts.length)
   return (
     <WrapperContent>
       <ContactForm createContact={createContact} />
